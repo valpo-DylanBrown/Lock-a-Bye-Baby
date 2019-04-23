@@ -15,7 +15,7 @@ begin
   process(clk, set)
   begin
     if(set = '1') then -- if set
-      safetyLock <= '1';
+      int_lock <= '1';
     else
       if(rising_edge(clk)) then --open if rising edge
         if(int_lock = '0') then --if lock state
