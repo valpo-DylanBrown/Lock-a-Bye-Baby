@@ -9,7 +9,7 @@ end safetyLock;
 
 architecture behav of safetyLock is
 
-  signal int_lock : std_logic;
+  signal int_lock : std_logic:='0';
 
 begin
   process(clk, set)
