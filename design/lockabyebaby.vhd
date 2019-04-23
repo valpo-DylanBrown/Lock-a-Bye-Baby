@@ -48,7 +48,7 @@ architecture struct of Child_lock is
     port(set  : IN std_logic;
          clk  : IN std_logic;
          x,y   : IN std_logic_vector(1 downto 0);
-         lock, gps : OUT std_logic);
+         safetyLock, emergencyGPS : OUT std_logic);
   end component;
   --declare signals
   signal int_clk : std_logic;
@@ -61,7 +61,7 @@ architecture struct of Child_lock is
     outerLock: outside_lock port map(y => outsidePad, clk => int_clk, clr => clr, z=> int_pattern2);
     insideDisplay: display port map(count => insidePad, segs=>innerDisplay);
     outsideDisplay: display port map(count => outsidePad, segs=>outerDisplay);
-    lock : safetyLock port map(set=>parent, clk=>int_clk, x=>int_pattern1, y=>int_pattern2, lock=>lock, gps=>gps);
+    lock : safetyLock port map(set=>parent, clk=>int_clk, x=>int_pattern1, y=>int_pattern2, safetyLock=>lock, emergencyGPS=>gps);
     pattern1 <= int_pattern1;
     pattern2 <= int_pattern2;
 end struct;
