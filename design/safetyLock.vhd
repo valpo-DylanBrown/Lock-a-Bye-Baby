@@ -4,7 +4,7 @@ entity safetyLock is
   port(set  : IN std_logic;
        clk  : IN std_logic;
        x,y   : IN std_logic_vector(1 downto 0);
-       lock, gps : OUT std_logic);
+       safetyLock, emergencyGPS : OUT std_logic);
 end safetyLock;
 
 architecture behav of safetyLock is
@@ -15,7 +15,7 @@ begin
   process(clk, set)
   begin
     if(set = '1') then -- if set
-      lock <= '1';
+      safetyLock <= '1';
     else
       if(rising_edge(clk)) then --open if rising edge
         if(int_lock = '0') then --if lock state
@@ -36,11 +36,12 @@ begin
           end if; --end pattern check
         end if; -- end lock state
         if(x = "11") then --if GPS state
-          gps<='1';
+          emergencyGPS<='1';
         else
-          gps<= '0';
+          emergencyGPS<= '0';
         end if; -- end GPS state
       end if; --end if set
     end if; -- end if rising edge
   end process;
+  safetyLock <= int_lock;
 end behav;
