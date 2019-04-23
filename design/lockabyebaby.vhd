@@ -54,6 +54,8 @@ architecture struct of Child_lock is
   -- int_clk : std_logic;
   signal int_pattern1 : std_logic_vector(1 downto 0);
   signal int_pattern2 : std_logic_vector(1 downto 0);
+  signal int_lock1    : std_logic_vector(1 downto 0);
+  signal int_lock2    : std_logic_vector(1 downto 0);
 
   begin
     --slowclk : slow_clk port map(In_Clk=>clk, Out_Clk=>int_clk);
@@ -64,9 +66,11 @@ architecture struct of Child_lock is
     --childLock : safetyLock port map(set=>parent, clk=>int_clk, x=>int_pattern1, y=>int_pattern2, safetyLock=>lock, emergencyGPS=>gps);
     innerLock: inside_lock port map(x => insidePad, clk => clk, clr => clr, z=> int_pattern1);
     outerLock: outside_lock port map(y => outsidePad, clk => clk, clr => clr, z=> int_pattern2);
+    int_lock1 <= int_pattern1;
+    int_lock2 <= int_pattern2;
     insideDisplay: display port map(count => insidePad, segs=>innerDisplay);
     outsideDisplay: display port map(count => outsidePad, segs=>outerDisplay);
-    childLock : safetyLock port map(set=>parent, clk=>clk, x=>int_pattern1, y=>int_pattern2, safetyLock=>lock, emergencyGPS=>gps);
+    childLock : safetyLock port map(set=>parent, clk=>clk, x=>int_lock1, y=>int_lock2, safetyLock=>lock, emergencyGPS=>gps);
     pattern1 <= int_pattern1;
     pattern2 <= int_pattern2;
 end struct;
