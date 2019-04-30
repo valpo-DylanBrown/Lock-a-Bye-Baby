@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -4.001
+TNS   : -94.286
+
+Type  : Slow 1200mV 85C Model Setup 'LCD_Display:phone|CLK_400HZ'
+Slack : -2.732
+TNS   : -43.210
+
+Type  : Slow 1200mV 85C Model Setup 'slow_clk:slowclk|Out_Clk'
+Slack : -0.741
+TNS   : -3.438
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.163
+TNS   : -0.163
+
+Type  : Slow 1200mV 85C Model Hold 'LCD_Display:phone|CLK_400HZ'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'slow_clk:slowclk|Out_Clk'
+Slack : 0.406
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -64.680
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'LCD_Display:phone|CLK_400HZ'
+Slack : -1.285
+TNS   : -48.830
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'slow_clk:slowclk|Out_Clk'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -3.531
+TNS   : -80.748
+
+Type  : Slow 1200mV 0C Model Setup 'LCD_Display:phone|CLK_400HZ'
+Slack : -2.401
+TNS   : -36.122
+
+Type  : Slow 1200mV 0C Model Setup 'slow_clk:slowclk|Out_Clk'
+Slack : -0.579
+TNS   : -2.349
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.138
+TNS   : -0.138
+
+Type  : Slow 1200mV 0C Model Hold 'LCD_Display:phone|CLK_400HZ'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'slow_clk:slowclk|Out_Clk'
+Slack : 0.357
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -64.680
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'LCD_Display:phone|CLK_400HZ'
+Slack : -1.285
+TNS   : -48.830
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'slow_clk:slowclk|Out_Clk'
+Slack : -1.285
+TNS   : -12.850
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -1.455
+TNS   : -21.600
+
+Type  : Fast 1200mV 0C Model Setup 'LCD_Display:phone|CLK_400HZ'
+Slack : -0.804
+TNS   : -6.709
+
+Type  : Fast 1200mV 0C Model Setup 'slow_clk:slowclk|Out_Clk'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.283
+TNS   : -0.283
+
+Type  : Fast 1200mV 0C Model Hold 'LCD_Display:phone|CLK_400HZ'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'slow_clk:slowclk|Out_Clk'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -53.977
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'LCD_Display:phone|CLK_400HZ'
+Slack : -1.000
+TNS   : -38.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'slow_clk:slowclk|Out_Clk'
+Slack : -1.000
+TNS   : -10.000
+
+------------------------------------------------------------

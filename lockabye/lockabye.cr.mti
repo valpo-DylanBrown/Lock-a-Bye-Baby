@@ -1,0 +1,43 @@
+H:/ece222lab/lockabye/outside_lock.vhd {1 {vcom -work work -2002 -explicit H:/ece222lab/lockabye/outside_lock.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity outside_lock
+-- Compiling architecture behav of outside_lock
+
+} {} {}} H:/ece222lab/lockabye/safetyLock.vhd {1 {vcom -work work -2002 -explicit H:/ece222lab/lockabye/safetyLock.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity safetyLock
+-- Compiling architecture behav of safetyLock
+
+} {} {}} H:/ece222lab/lockabye/slow_clk.vhd {1 {vcom -work work -2002 -explicit H:/ece222lab/lockabye/slow_clk.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity slow_clk
+-- Compiling architecture behav of slow_clk
+
+} {} {}} H:/ece222lab/lockabye/inside_lock.vhd {1 {vcom -work work -2002 -explicit H:/ece222lab/lockabye/inside_lock.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity inside_lock
+-- Compiling architecture behav of inside_lock
+
+} {} {}} H:/ece222lab/lockabye/LCD_Display.vhd {1 {vcom -work work -2002 -explicit H:/ece222lab/lockabye/LCD_Display.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity LCD_Display
+-- Compiling architecture a of LCD_Display
+
+} {} {}}
