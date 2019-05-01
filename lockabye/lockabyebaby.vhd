@@ -7,10 +7,10 @@ entity lockabyebaby is
       lock, gps                  : OUT std_logic;
       innerDisplay, outerDisplay : OUT std_logic_vector(6 downto 0);
       pattern1, pattern2         : OUT std_logic_vector(1 downto 0);
-      LCD_RS, LCD_E				       : OUT	STD_LOGIC;
-      LCD_RW						         : OUT  STD_LOGIC;
-      LCD_ON, LCD_BLON           : OUT std_logic;
-      DATA_BUS					         : INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
+      LCD_RS, LCD_E		 : OUT	STD_LOGIC;
+      LCD_RW						: OUT  STD_LOGIC;
+      LCD_ON, LCD_BLON   : OUT std_logic;
+      DATA_BUS					: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
 end lockabyebaby;
 
 architecture struct of lockabyebaby is
@@ -28,11 +28,11 @@ architecture struct of lockabyebaby is
 
   component LCD_Display IS
   	--GENERIC(Num_Hex_Digits: Integer:= 2);
-  	PORT(reset, clk_48Mhz			: IN	STD_LOGIC;
+  	PORT(reset, clk_48Mhz : IN	STD_LOGIC;
   		 --Hex_Display_Data			: IN    STD_LOGIC_VECTOR((Num_Hex_Digits*4)-1 DOWNTO 0);
-  		 LCD_RS, LCD_E				: OUT	STD_LOGIC;
-  		 LCD_RW						: OUT   STD_LOGIC;
-  		 DATA_BUS					: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
+  		 LCD_RS, LCD_E : OUT	STD_LOGIC;
+  		 LCD_RW	: OUT   STD_LOGIC;
+  		 DATA_BUS	: INOUT	STD_LOGIC_VECTOR(7 DOWNTO 0));
 
   END component;
   --done
@@ -67,9 +67,9 @@ architecture struct of lockabyebaby is
     outerLock: outside_lock port map(y => outsidePad, clk => int_clk, clr => clr, z=> int_pattern2);
     insideDisplay: display port map(count => insidePad, segs=>innerDisplay);
     outsideDisplay: display port map(count => outsidePad, segs=>outerDisplay);
-   childLock : safetyLock port map(set=>parent, clk=>int_clk, x=>int_pattern1, y=>int_pattern2, safetyLock=>lock, emergencyGPS=>int_GPS);
-	
-	
+    childLock : safetyLock port map(set=>parent, clk=>int_clk, x=>int_pattern1, y=>int_pattern2, safetyLock=>lock, emergencyGPS=>int_GPS);
+
+
     --innerLock: inside_lock port map(x => insidePad, clk => clk, clr => clr, z=> int_pattern1);
     --outerLock: outside_lock port map(y => outsidePad, clk => clk, clr => clr, z=> int_pattern2);
     int_lock1 <= int_pattern1;
@@ -77,7 +77,7 @@ architecture struct of lockabyebaby is
     --insideDisplay: display port map(count => insidePad, segs=>innerDisplay);
     --outsideDisplay: display port map(count => outsidePad, segs=>outerDisplay);
     --childLock : safetyLock port map(set=>parent, clk=>clk, x=>int_lock1, y=>int_lock2, safetyLock=>lock, emergencyGPS=>int_GPS);
-	 
+
     phone: LCD_display port map(reset=>'1', clk_48Mhz=>clk, LCD_RS=>LCD_RS, LCD_E=>LCD_E, LCD_RW=>LCD_RW, DATA_BUS=>DATA_BUS);
     LCD_ON <= int_GPS;
     LCD_BLON <= int_GPS;
